@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>clock</title>
+</head>
+
+<body>
+
+  <div class="main">
+    <h1>Have a good time.</h1>
+
+    <div class="clock">
+
+
+      <div class="second"></div>
+      <div class="minute"></div>
+      <div class="hour"></div>
+    </div>
+
+  </div>
+
+  <script>
+
+    var second = document.querySelector(".second");
+    var min = document.querySelector(".minute");
+    var hor = document.querySelector(".hour");
+
+    setInterval(() => {
+
+      var date = new Date();
+      var rotate = date.getSeconds() * 6;
+      second.style.transform = `translate(-50%, -50%) rotate(${-90 + rotate + "deg"})`;
+
+      var minute = date.getMinutes() * 6;
+      min.style.transform = `translate(-50%, -50%) rotate(${-90 + minute + "deg"})`;
+
+      var hour = date.getHours() * 15;
+      hor.style.transform = `translate(-50%, -50%) rotate(${-150 + hour + "deg"})`;
+
+    }, 1000);
+
+    //facebook friend request
+
+    // for (var i = 0; i < 100; i++) {
+    //   document.getElementsByClassName("_42ft _4jy0 FriendRequestAdd addButton _4jy3 _517h _51sy")[i].click();
+    // }
+
+
+
+  </script>
+
+</body>
+
+</html>
